@@ -2,7 +2,7 @@
 
 Transcriptome-wide association studies (TWAS) have been recently applied to successfully identify many novel genes associated with complex traits. While appealing, TWAS tend to identify multiple significant genes per locus, and many of them may not be causal due to confounding through linkage disequilibrium (LD) among SNPs. Here we introduce a powerful fine-mapping method called **FOGS** that prioritizes putative causal genes by accounting for local LD. We apply a weighted adaptive test with eQTL-derived weights to maintain high power across various scenarios.  
 
-In this software, we implement **FOGS** as well as one alternate method [**FOCUS**](https://github.com/bogdanlab/focus.
+In this software, we implement **FOGS** as well as one alternate method [**FOCUS**](https://github.com/bogdanlab/focus).
 
 
 
@@ -34,9 +34,9 @@ Please cite the following manuscript for using this software:
 - Download and unpackage the FOGS package from GitHub. Download through [this link](https://github.com/ChongWuLab/CMO/releases/tag/V2.1) or by the following commands:
 
   ~~~
-  wget https://github.com/ChongWuLab/CMO/archive/v2.1.zip
-  unzip v2.1.zip
-  cd CMO-2.1
+  wget https://github.com/ChongWuLab/FOGS/archive/v2.0.zip
+  unzip v2.0.zip
+  cd FOGS-2.0
   ~~~
 
 - Install the required packages (in R, run the following)
@@ -60,7 +60,7 @@ BiocManager::install("GenomicRanges")
 
 ## <a name="Analysis"></a>Typical analysis and output
 
-The FOGS analysis takes pre-computed Gene expression prediction models, LD reference panel, and GWAS summary data to priortize putative causal genes. This example assumes you have set up the required environment and data, as illustrated in the previous section. 
+The FOGS analysis takes pre-computed Gene expression prediction models, LD reference panel, and GWAS summary data to prioritize putative causal genes. This example assumes you have set up the required environment and data, as illustrated in the previous section. 
 
 To help users better use our software, we provided [a detailed pipeline]() for running FOGS with [COVID19-hg GWAS meta-analyses round 5 data](https://www.covid19hg.org/results/). *We will provide this pipeline within two weeks.*
 
@@ -159,7 +159,7 @@ The results are stored in a user-defined output file. For illustration, we expla
 | --genelist   | The corresponding gene list for the weights files. It should contain the following four columns:left, right,chr, and gene. | Required |
 | --sumstat    | Summary statistics (needs to be processed by munge.R; Input 1 described above) | Required |
 | --saveprefix | The prefix for the output files                              | Required |
-| --chr_id     | Chromsome ID for the locus of interst                        | Required |
+| --chr_id     | Chromosome ID for the locus of interest                      | Required |
 | --locus_id   | Locus ID for the locus of interest                           | Required |
 
 ## <a name="Analysis"></a>FAQ
