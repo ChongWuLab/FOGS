@@ -31,12 +31,10 @@ Please cite the following manuscript for using this software:
 
 ## <a name="Installation"></a>Installation
 
-- Download and unpackage the FOGS package from GitHub. Download through [this link](https://github.com/ChongWuLab/CMO/releases/tag/V2.1) or by the following commands:
+- Download and unpackage the FOGS package from GitHub. Download through [this link](https://github.com/ChongWuLab/FOGS/releases/tag/2.0) or by the following commands:
 
   ~~~
-  wget https://github.com/ChongWuLab/FOGS/archive/v2.0.zip
-  unzip v2.0.zip
-  cd FOGS-2.0
+  wget https://github.com/ChongWuLab/FOGS/releases/download/2.0/FOGS.zip
   ~~~
 
 - Install the required packages (in R, run the following)
