@@ -59,19 +59,21 @@ make_option("--locus_id", action="store", default=NA, type='character',
 help="The locus ID [required]")
 )
 
-
 opt = parse_args(OptionParser(option_list=option_list))
-opt = list(
-refld = "/gpfs/research/chongwu/shared/1000Genomes/1000G.EUR.ALLSNP.QC.CHR",
-outd = "/gpfs/research/chongwu/Chong/MWAS/Finemapping/Blood",
-loci = "/gpfs/research/chongwu/shared/LDetect_LD_regions/EUR/",
-weights = "/gpfs/research/chongwu/Chong/Application/COVID19/Finemapping/Blood_JTI_weights.txt",
-genelist = "/gpfs/research/chongwu/Chong/Application/COVID19/Finemapping/Blood_JTI_gene_list.txt",
-sumstat = "/gpfs/research/chongwu/Chong/Application/COVID19/Finemapping/processed_data.txt",
-saveprefix = "test",
-chr_id = 3,
-locus_id = 32
-)
+
+#--refld /gpfs/research/chongwu/shared/1000Genomes/1000G.EUR.ALLSNP.QC.CHR --outd /gpfs/research/chongwu/Chong/MWAS/Finemapping/Blood --loci /gpfs/research/chongwu/shared/LDetect_LD_regions/EUR/ --weights /gpfs/research/chongwu/Chong/Application/COVID19/Finemapping/Whole_Blood_weights.txt --genelist /gpfs/research/chongwu/Chong/Application/COVID19/Finemapping/Whole_Blood_UT_gene_list.txt --sumstat /gpfs/research/chongwu/Chong/Application/COVID19/Finemapping/processed_data.txt --saveprefix Blood_UT --chr_id 3 --locus_id 32
+
+#opt = list(
+#refld = "/gpfs/research/chongwu/shared/1000Genomes/1000G.EUR.ALLSNP.QC.CHR",
+#outd = "/gpfs/research/chongwu/Chong/MWAS/Finemapping/Blood",
+#loci = "/gpfs/research/chongwu/shared/LDetect_LD_regions/EUR/",
+#weights = "/gpfs/research/chongwu/Chong/Application/COVID19/Finemapping/Blood_JTI_weights.txt",
+#genelist = "/gpfs/research/chongwu/Chong/Application/COVID19/Finemapping/Blood_JTI_gene_list.txt",
+#sumstat = "/gpfs/research/chongwu/Chong/Application/COVID19/Finemapping/processed_data.txt",
+#saveprefix = "test",
+#chr_id = 3,
+#locus_id = 32
+#)
 
 loci.indx = as.numeric(opt$locus_id)
 chr.id = as.numeric(opt$chr_id)
