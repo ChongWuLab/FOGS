@@ -71,7 +71,7 @@ munge_sumstat <- function(sumstats,sampleN=NULL) {
     header.inner[header.inner %in% try.se] <- "SE"
 
     # sample size
-    try.samplesize <- c("samplesize", "N","all_meta_sample_N")
+    try.samplesize <- c("samplesize", "n","all_meta_sample_n")
     
     if(sum(header.inner %in% try.samplesize)==1) {
         header.inner[header.inner %in% try.samplesize] <- "N"
